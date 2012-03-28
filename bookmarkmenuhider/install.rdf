@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$tYU0h2"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:type="2"
+                   em:minVersion="4.0"
+                   em:maxVersion="6.0a2" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="{f154a53f-654b-4e52-9544-fd51a0e82edd}"
+                   em:name="BookmarkMenuHider"
+                   em:version="1.2"
+                   em:creator="eiji.anonremail@gmail.com"
+                   em:description="hide some bookmark-menu-fields"
+             em:optionsURL="chrome://bookmarkmenuhider/content/options.xul">
+    <em:targetApplication RDF:resource="rdf:#$tYU0h2"/>
+    <em:translator>Mikael sv-SE</em:translator>
+  </RDF:Description>
+</RDF:RDF>

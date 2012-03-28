@@ -1,0 +1,7 @@
+
+content bookmarkmenuhider   chrome/content/
+
+overlay chrome://browser/content/browser.xul    chrome://bookmarkmenuhider/content/bookmarkmenuhider.xul
+
+locale  bookmarkmenuhider   en-US   chrome/locale/en-US/
+locale  bookmarkmenuhider   sv-SE   chrome/locale/sv-SE/

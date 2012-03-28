@@ -1,0 +1,9 @@
+
+
+#BookmarkMenuHiderOptions radio[pane=BookmarkMenuHiderOptionsButton] {
+  list-style-image: url("chrome://bookmarkmenuhider/content/button.png");
+}
+
+#BookmarkMenuHiderOptions radio[pane=BookmarkMenuHiderOptionsMenu] {
+  list-style-image: url("chrome://bookmarkmenuhider/content/menu.png");
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+<!--
+   The contents of this file are subject to the Mozilla Public
+   License Version 1.1 (the "MPL"); you may not use this file
+   except in compliance with the MPL. You may obtain a copy of
+   the MPL at http://www.mozilla.org/MPL/
+
+   Software distributed under the MPL is distributed on an "AS
+   IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+   implied. See the MPL for the specific language governing
+   rights and limitations under the MPL.
+
+   The Original Code is BookmarkMenuHider.
+
+   The Initial Developer of the Original Code is 
+   <eiji.anonremail@gmail.com>.
+   
+
+   Alternatively, the contents of this file may be used under the
+   terms of the GNU General Public License (the "GPL"), in which case
+   the provisions of the GPL are applicable instead of
+   those above. If you wish to allow use of your version of this
+   file only under the terms of the GPL and not to allow
+   others to use your version of this file under the MPL, indicate
+   your decision by deleting the provisions above and replace them
+   with the notice and other provisions required by the GPL.
+   If you do not delete the provisions above, a recipient
+   may use your version of this file under either the MPL or the
+   GPL.
+-->
+
+<?xml-stylesheet href="chrome://global/skin/global.css"  type="text/css"?>
+<?xml-stylesheet href="chrome://bookmarkmenuhider/content/bookmarkmenuhider.css"  type="text/css"?>
+
+
+
+<!DOCTYPE window [
+  <!ENTITY % overlayDTD SYSTEM "chrome://bookmarkmenuhider/locale/bookmarkmenuhider.dtd" >
+    %overlayDTD;
+  <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+    %browserDTD;
+]>
+
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+     id="BookmarkMenuHiderOptions">
+     <prefpane id="BookmarkMenuHiderOptionsButton" label="&bookmarkmenuhider.options.toolbar;">
+       <preferences>
+         <preference id="bmmh_opt1" name="extensions.bookmarkmenuhider.opt1" type="bool"/>
+         <preference id="bmmh_opt2" name="extensions.bookmarkmenuhider.opt2" type="bool"/>
+         <preference id="bmmh_opt3" name="extensions.bookmarkmenuhider.opt3" type="bool"/>
+         <preference id="bmmh_opt4" name="extensions.bookmarkmenuhider.opt4" type="bool"/>
+         <preference id="bmmh_opt5" name="extensions.bookmarkmenuhider.opt5" type="bool"/>
+         <preference id="bmmh_opt6" name="extensions.bookmarkmenuhider.opt6" type="bool"/>
+       </preferences>
+       <checkbox preference="bmmh_opt1" label="&viewBookmarksToolbar.label;"/>
+       <separator class="groove"/>
+       <checkbox preference="bmmh_opt2" label="&showAllBookmarks2.label;"/>
+       <separator class="groove"/>
+       <checkbox preference="bmmh_opt3" label="&bookmarkThisPageCmd.label;"/>
+       <checkbox preference="bmmh_opt4" label="&subscribeToPageMenuitem.label;"/>
+       <separator class="groove"/>
+       <checkbox preference="bmmh_opt5" label="&personalbarCmd.label;"/>
+       <separator class="groove"/>
+       <label value="..." disabled="true"/>
+       <separator class="groove"/>
+       <checkbox preference="bmmh_opt6" label="&bookmarkmenuhider.options.unsorted;"/>
+     </prefpane>
+     <prefpane id="BookmarkMenuHiderOptionsMenu" label="&bookmarkmenuhider.options.menubar;">
+     <preferences>
+        <preference id="bmmh_opt1a" name="extensions.bookmarkmenuhider.opt1a" type="bool"/>
+        <preference id="bmmh_opt2a" name="extensions.bookmarkmenuhider.opt2a" type="bool"/>
+        <preference id="bmmh_opt3a" name="extensions.bookmarkmenuhider.opt3a" type="bool"/>
+        <preference id="bmmh_opt4a" name="extensions.bookmarkmenuhider.opt4a" type="bool"/>
+        <preference id="bmmh_opt5a" name="extensions.bookmarkmenuhider.opt5a" type="bool"/>
+      </preferences>
+       <checkbox preference="bmmh_opt1a" label="&bookmarkThisPageCmd.label;"/>
+       <checkbox preference="bmmh_opt2a" label="&subscribeToPageMenuitem.label;"/>
+       <hbox>
+         <checkbox preference="bmmh_opt3a" label="&bookmarkAllTabs.label;"/>
+         <label value="&bookmarkmenuhider.options.optional;" disabled="true"/>
+       </hbox>
+       <checkbox preference="bmmh_opt4a" label="&showAllBookmarks2.label;"/>
+       <separator class="groove"/>
+       <checkbox preference="bmmh_opt5a" label="&personalbarCmd.label;"/>
+     </prefpane>
+</prefwindow>
+   
