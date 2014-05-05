@@ -5,12 +5,12 @@
   <RDF:Description RDF:about="rdf:#$tYU0h2"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:type="2"
-                   em:minVersion="4.0"
-                   em:maxVersion="6.0a2" />
+                   em:minVersion="29.0"
+                   em:maxVersion="30.0" />
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="{f154a53f-654b-4e52-9544-fd51a0e82edd}"
                    em:name="BookmarkMenuHider"
-                   em:version="1.2"
+                   em:version="1.3"
                    em:creator="eiji.anonremail@gmail.com"
                    em:description="hide some bookmark-menu-fields"
              em:optionsURL="chrome://bookmarkmenuhider/content/options.xul">

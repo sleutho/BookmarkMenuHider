@@ -53,18 +53,14 @@
          <preference id="bmmh_opt4" name="extensions.bookmarkmenuhider.opt4" type="bool"/>
          <preference id="bmmh_opt5" name="extensions.bookmarkmenuhider.opt5" type="bool"/>
          <preference id="bmmh_opt6" name="extensions.bookmarkmenuhider.opt6" type="bool"/>
+         <preference id="bmmh_opt7" name="extensions.bookmarkmenuhider.opt7" type="bool"/>
        </preferences>
+       <checkbox preference="bmmh_opt7" label="&viewBookmarksSidebar2.label;"/>
        <checkbox preference="bmmh_opt1" label="&viewBookmarksToolbar.label;"/>
-       <separator class="groove"/>
        <checkbox preference="bmmh_opt2" label="&showAllBookmarks2.label;"/>
-       <separator class="groove"/>
        <checkbox preference="bmmh_opt3" label="&bookmarkThisPageCmd.label;"/>
        <checkbox preference="bmmh_opt4" label="&subscribeToPageMenuitem.label;"/>
-       <separator class="groove"/>
        <checkbox preference="bmmh_opt5" label="&personalbarCmd.label;"/>
-       <separator class="groove"/>
-       <label value="..." disabled="true"/>
-       <separator class="groove"/>
        <checkbox preference="bmmh_opt6" label="&bookmarkmenuhider.options.unsorted;"/>
      </prefpane>
      <prefpane id="BookmarkMenuHiderOptionsMenu" label="&bookmarkmenuhider.options.menubar;">

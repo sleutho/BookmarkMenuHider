@@ -76,7 +76,6 @@ var BookmarkMenuHider = (function () {
         opt = ar_prefs.getBoolPref("opt5a");
         item = document.getElementById("bookmarksToolbarFolderMenu");
         my.showHide(item, opt);
-
     };
 
     my.bookmarksButtonHandler = function (aTarget) {
@@ -84,6 +83,11 @@ var BookmarkMenuHider = (function () {
         var ar_prefs = Components.classes["@mozilla.org/preferences-service;1"].
                 getService(Components.interfaces.nsIPrefService).
                     getBranch("extensions.bookmarkmenuhider.");
+
+        
+        var opt = ar_prefs.getBoolPref("opt7");
+        var item = document.getElementById("BMB_viewBookmarksSidebar");
+        my.showHide(item, opt);
 
         var opt = ar_prefs.getBoolPref("opt1");
         var item = document.getElementById("BMB_viewBookmarksToolbar");
@@ -103,36 +107,27 @@ var BookmarkMenuHider = (function () {
         my.showHide(item, opt2);
         my.showHide(item2, opt2);
 
-        if (item2.nextSibling.id == "")
-            item2.nextSibling.setAttribute("style", (opt || opt2) ? "" : "display: none");
-
         opt = ar_prefs.getBoolPref("opt5");
         item = document.getElementById("BMB_bookmarksToolbar");
         my.showHide(item, opt);
 
-
         opt = ar_prefs.getBoolPref("opt6");
         item = document.getElementById("BMB_unsortedBookmarks");
-        if (item)
-        {
-            if (item.previousSibling)
-                item.previousSibling.setAttribute("collapsed", !opt);
-            item.setAttribute("collapsed", !opt);
-        }
-
+        my.showHide(item, opt);
     };
 
     my.showHide = function (item, boolShow) {
-        item.setAttribute("collapsed", !boolShow);
-        //if it's a separator
-        if (item.nextSibling && item.nextSibling.id == "")
-            item.nextSibling.setAttribute("collapsed", !boolShow);
+        if (item)
+        {
+            item.setAttribute("hidden", !boolShow);
+            //if it's a separator
+            if (item.nextSibling && item.nextSibling.id == "")
+                item.nextSibling.setAttribute("hidden", !boolShow);
+        }
     };
 
     return my;
 }());
 
-
 document.getElementById("BMB_bookmarksPopup").addEventListener("popupshowing", BookmarkMenuHider.bookmarksButtonHandler, false);
 document.getElementById("bookmarksMenuPopup").addEventListener("popupshowing", BookmarkMenuHider.bookmarksMenuHandler, false);
-
