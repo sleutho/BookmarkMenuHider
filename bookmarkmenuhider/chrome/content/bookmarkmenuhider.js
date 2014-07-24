@@ -96,6 +96,8 @@ var BookmarkMenuHider = (function () {
         opt = ar_prefs.getBoolPref("opt2");
         item = document.getElementById("BMB_bookmarksShowAll");
         my.showHide(item, opt);
+        item = document.getElementById("BMB_bookmarksShowAllTop");
+        my.showHide(item, opt);
 
         opt = ar_prefs.getBoolPref("opt3");
         item = document.getElementById("BMB_bookmarkThisPage");
